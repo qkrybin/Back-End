@@ -2,6 +2,7 @@
 - <https://www.soberppl.tk>
 
 ### 참고용  /home/ubuntu/sober에서 디렉토리 구조
+```
 sober
 ├── client  //Front-End
 │   ├── node_modules
@@ -13,6 +14,7 @@ sober
     ├── public
     ├── routes
     └── views
+```
 
 ### log
 - routes 정리, app.js에 적용 / cannot import module  
