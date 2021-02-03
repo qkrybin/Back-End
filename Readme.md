@@ -16,5 +16,8 @@ sober
     └── views
 ```
 
+### log
+- routes 정리, app.js에 적용 / cannot import module  
+
 
 
