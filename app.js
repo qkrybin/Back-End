@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var express = require('express');
 var http = require('http');
 var createError = require('http-errors');
@@ -7,18 +7,7 @@ var path = require('path');
 var logger = require('morgan');
 var cors = require('cors');
 
-//import api from './routes';
-=======
-import express from 'express';
-import path from 'path;
-import morgan from 'morgan'; // HTTP REQUEST LOGGER
-import bodyParser from 'body-parser'; // PARSE HTML BODY
-import createError from 'http-erros';
-import session from 'express-session';
-import cors from 'cors';
-
-import route from './routes';
->>>>>>> 2d1d64688502b21e0df60ab738554a074478aa8a
+//import route from './routes';
 
 const app = express();
 app.set('port', process.env.PORT || 3000); //port setup
@@ -29,7 +18,6 @@ maria.connect();
 
 //app.use('/', express.static(path.join(__dirname, '../client/public')));
 /* set up routers & static directory */
-<<<<<<< HEAD
 //app.use('/api', api);
 
 const home = require('./routes/index');
@@ -38,12 +26,7 @@ app.use('/', home);
 //app.get('*', (req, res) => {
 //    res.sendFile(path.resolve(__dirname, '../client/public/index.html'));
 //});
-=======
-app.use('/', route);
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/public/index.html'));
-});
->>>>>>> 2d1d64688502b21e0df60ab738554a074478aa8a
+
 
 /* catch 404 & forward to error handler*/
 app.use(function(req, res, next) {
