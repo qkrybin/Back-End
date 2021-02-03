@@ -1,3 +1,2 @@
-- nginx + nodejs 서버
-- express framework로 노드서버구성
-
+- nginx + nodejs서버(express)
+- <https://www.soberppl.tk>
