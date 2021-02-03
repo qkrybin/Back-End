@@ -44,14 +44,7 @@ app.use(function(err, req, res, next) {
 var server = app.listen(app.get('port'), function() {
         console.log('Express server listening on port ' + server.address().port);
 });
-//module.exports = app;
-
-
-//var createError = require('http-errors');
-//var express = require('express');
-//var path = require('path');
-//var logger = require('morgan');
-//var cors = require('cors');
+module.exports = app;
 
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
@@ -63,8 +56,4 @@ var server = app.listen(app.get('port'), function() {
 //app.use(express.json());
 //app.use(express.urlencoded({ extended: false }));
 //app.use(express.static(path.join(__dirname, 'public')));
-
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
-//app.use("/testAPI", testAPIRouter);
 
