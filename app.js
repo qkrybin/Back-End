@@ -1,11 +1,12 @@
-import express from 'express';
-import path from 'path;
-import morgan from 'morgan'; // HTTP REQUEST LOGGER
-import bodyParser from 'body-parser'; // PARSE HTML BODY
-import createError from 'http-erros';
-import session from 'express-session';
+var express = require('express');
+var http = require('http');
+var createError = require('http-errors');
+var bodyParser = require('body-parser');
+var path = require('path');
+var logger = require('morgan');
+var cors = require('cors');
 
-import api from './routes';
+//import api from './routes';
 
 const app = express();
 app.set('port', process.env.PORT || 3000); //port setup
@@ -14,14 +15,16 @@ app.set('port', process.env.PORT || 3000); //port setup
 const maria = require('./maria');
 maria.connect();
 
-app.use('/', express.static(path.join(__dirname, '../client/public')));
-
+//app.use('/', express.static(path.join(__dirname, '../client/public')));
 /* set up routers & static directory */
-app.use('/api', api);
+//app.use('/api', api);
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/public/index.html'));
-});
+const home = require('./routes/index');
+app.use('/', home);
+
+//app.get('*', (req, res) => {
+//    res.sendFile(path.resolve(__dirname, '../client/public/index.html'));
+//});
 
 /* catch 404 & forward error to error handler*/
 app.use(function(req, res, next) {
