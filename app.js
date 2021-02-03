@@ -1,3 +1,4 @@
+
 var express = require('express');
 var http = require('http');
 var createError = require('http-errors');
@@ -6,7 +7,7 @@ var path = require('path');
 var logger = require('morgan');
 var cors = require('cors');
 
-//import api from './routes';
+//import route from './routes';
 
 const app = express();
 app.set('port', process.env.PORT || 3000); //port setup
@@ -26,17 +27,17 @@ app.use('/', home);
 //    res.sendFile(path.resolve(__dirname, '../client/public/index.html'));
 //});
 
-/* catch 404 & forward error to error handler*/
+
+/* catch 404 & forward to error handler*/
 app.use(function(req, res, next) {
   next(createError(404));
 });
+/* handle error */
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
+  res.status(err.status || 500);  // render the error page
   res.render('error');
 });
 
@@ -56,4 +57,3 @@ module.exports = app;
 //app.use(express.json());
 //app.use(express.urlencoded({ extended: false }));
 //app.use(express.static(path.join(__dirname, 'public')));
-
