@@ -1,6 +1,11 @@
-var express = require('express');
-var router = express.Router();
-const maria = require('../maria');
+import express from 'express';
+import account from './account';
+import chat from './chat';
+import users from './users';
+import testAPI from './testAPI';
+import socket from './socketio';
+
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,5 +15,10 @@ router.get('/', function(req, res, next) {
 
 });
 
-//module.exports = app;
+router.use('/chat', chat);
+router.use('/socket', socket);
+router.use('/users', users);
+router.use('/account', account);
+router.use('/testAPI', testAPI);
+
 module.exports = router;
