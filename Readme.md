@@ -2,4 +2,4 @@
 - <https://www.soberppl.tk>
 
 ### log
-- 2/3: routes 정리, app.js에 
+- routes 정리, app.js에 적용 / cannot import module  
