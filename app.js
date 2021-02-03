@@ -47,7 +47,6 @@ var server = app.listen(app.get('port'), function() {
 });
 module.exports = app;
 
-
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
 //app.set("view engine", "ejs");
